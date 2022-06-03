@@ -1,0 +1,17 @@
+{% include 'account/header.html.twig' %}
+<a class="button" href="{{ path('app_account_edit') }}">new</a><br/><br/>
+<table class="table">
+    {% for user in users %}
+        <tr class="row">
+            <td class="cell">{{ user.email }}</td>
+            <td class="cell">{{ user.name }}</td>
+            <td class="cell">
+                <a class="button" href="{{ path('app_account_delete', {id: user.id}) }}">delete</a>
+            </td>
+            <td class="cell">
+                <a class="button" href="{{ path('app_account_edit', {id: user.id}) }}">edit</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+

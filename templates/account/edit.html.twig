@@ -1,0 +1,25 @@
+{% include 'account/header.html.twig' %}
+<a class="button" href="{{ path('app_account') }}">back</a><br/><br/>
+<form method="post" action="{{ path('app_account_store', {id: user.id}) }}">
+    <table>
+        <tr class="row">
+            <td class="cell">Email:</td>
+            <td><input type="text" name="email" value="{{ user.email }}"/></td>
+        </tr>
+        <tr class="row">
+            <td class="cell">Password:</td>
+            <td><input type="password" name="password" value="{{ user.password }}"/></td>
+        </tr>
+        <tr class="row">
+            <td class="cell">Name:</td>
+            <td><input type="text" name="name" value="{{ user.name }}"/></td>
+        </tr>
+
+        <tr class="row">
+            <td class="cell" colspan="2">
+                <input class="button" type="submit" value="send" /><br/>
+            </td>
+        </tr>
+
+    </table>
+</form>

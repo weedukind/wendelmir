@@ -1,0 +1,4 @@
+symfony console make:controller ConferenceController
+
+bin/console doctrine:database:create
+bin/console make:migration
